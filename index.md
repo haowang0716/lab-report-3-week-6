@@ -1,37 +1,47 @@
-## Welcome to GitHub Pages
+# LAB Report 3
 
-You can use the [editor on GitHub](https://github.com/haowang0716/lab-report-3-week-6/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## my config file
+I used below command to create a config file in the hidden folder:
+```
+cd ~/.ssh
+touch config 
+```
+Then I used nano to put the below code into the config:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+Host ieng6
+    HostName ieng6.ucsd.edu
+    User cs15lwi22auv
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+To use nano, I used the below code: 
+```
+nano ~/.ssh/config
+```
 
-### Jekyll Themes
+It looks like this:
+![image](config.png)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/haowang0716/lab-report-3-week-6/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## SSH command login
+
+Now I can just use ssh ieng6 to log in to the server!
+```
+ssh ieng6
+```
+
+
+![image](ieng6.png)
+
+## SCP command
+I created a file named la_file on the server and I used the below scp command to copy it to my computer:
+```
+scp ieng6:la_file ~/desktop
+```
+Here is the result:
+![image](scp.png)
+
+
